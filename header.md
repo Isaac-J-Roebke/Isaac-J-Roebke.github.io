@@ -4,3 +4,7 @@
     <h2>Developer, Student, Enthusiast</h2>
   </header>
 </div>
+<div markdown="1" class="menu">
+
+[Home](index.html "Home page")
+</div>
