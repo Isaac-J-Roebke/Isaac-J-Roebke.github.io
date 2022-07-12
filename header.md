@@ -6,5 +6,5 @@
 </div>
 <div markdown="1" class="menu">
 
-  [Home](index.md "Home page")
+  <a href="index.md/">
 </div>
