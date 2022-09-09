@@ -1,8 +1,7 @@
-<body markdown="1">
----
-title: Isaac J Roebke
-layout: root
----
+<head>
+    {% include_relative header.md %}
+</head>
 
-{% include_relative header.md %}
+<body markdown="1">
+
 </body>
