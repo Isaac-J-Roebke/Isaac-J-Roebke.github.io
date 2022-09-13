@@ -1,6 +1,6 @@
-<head>
-    {% include_relative header.md %}
-</head>
-<body markdown="1">
+---
+title: Projects
+layout: root
+---
 
-</body>
+{% include_relative header.md %}
