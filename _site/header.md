@@ -1,7 +1,5 @@
-<head>
-  
-  <div markdown="1" class="menu">
-    <a href="index.html">Home</a> 
-    <a href="projects.html">Projects</a>
-  </div>
-</head>
+
+<div markdown="1" class="menu">
+  [Home](index.html "Home Page")
+  [Projects](projects.html "Projects Showcase")
+</div>
