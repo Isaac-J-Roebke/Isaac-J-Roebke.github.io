@@ -1,6 +1,6 @@
 ---
 title: Isaac J Roebke
-layout: root
+#layout: root
 description: Developer, Student, Enthusiast
 ---
 

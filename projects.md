@@ -1,6 +1,6 @@
 ---
 title: Projects
-layout: root
+#layout: root
 description: Works completed by yours truly
 ---
 
