@@ -13,15 +13,21 @@ description: " "
 <br>
 
 <div id="AreaUnderCurve">
-    <h1>Parallel Computing: Area Under a Curve</h1>
+  <h1>Parallel Computing: Area Under a Curve</h1>
 
-    <p>For this project, my task was to parallelize an algorithm designed to find the area under a curve.</p>
+  <p>For this project, my task was to parallelize an algorithm designed to find the area under a curve.</p>
 
-    <a href="">View Project on Github</a>
+  <a href=""><button>View Project on Github</button></a>
 </div>
 
-<div>
-  
+<br>
+
+<div id="ParallelCountSort">
+  <h1>Parallel Computing: Count Sort</h1>
+
+  <p>For this project, my task was to parallelize a count sort algorithm. On Github you can find my analysis and graphs showing speedup, efficiency, and the Karp-Flatt metric.</p>
+
+  <a href="https://github.com/Isaac-J-Roebke/Parallel-Count-Sort"><button>View Project on Github</button></a>
 </div>
 
 <!---
