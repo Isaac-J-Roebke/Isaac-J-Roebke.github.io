@@ -4,7 +4,7 @@ title: Isaac J Roebke
 description: Developer, Student, Enthusiast
 ---
 
-<div markdown="1" class="menu" style="text-align: center;">
+<div class="menu" style="text-align: center;">
   <a href="index.html"><button class="selected">Home</button></a>
   <a href="projects.html"><button>Projects</button></a>
   <a href="resume.html"><button>Resume</button></a>
@@ -16,13 +16,13 @@ description: Developer, Student, Enthusiast
    I am currently a student at Bowling Green State University and my major is Computer Science.
    I am passionate about Software Engineering and Web Development.</p>
 
-<!--
+<!---
 <p>Some things I excel at:</p>
 <ul>
     <li>C++, C#, C</li>
     <li>HTML, CSS, js, DOM</li>
     <li>Python, Ruby</li>
 </ul>
--->
+--->
 <br>
 <!---<a href="#"><button>top</button></a>--->

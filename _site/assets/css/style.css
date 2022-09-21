@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
-button { border-style: solid; border-radius: 0.5rem; }
+button { width: 30%; border-style: solid; border-radius: 0.5rem; background-color: whitesmoke; }
 
-.selected { border-style: none; color: #ffff; background-color: #159957; background-image: linear-gradient(120deg, #155799, #159957); }
+.selected { border-style: none; color: whitesmoke; background-color: #159957; background-image: linear-gradient(120deg, #155799, #159957); }
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /** 1. Set default font family to sans-serif. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
