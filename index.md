@@ -14,7 +14,8 @@ description: Developer, Student, Enthusiast
 
 <p style="text-indent: 15px">Hello and thank you for visiting my website!
    I am currently a student at Bowling Green State University and my major is Computer Science.
-   I am passionate about Software Engineering and Web Development.</p>
+   My passions inlude Software Engineering and Web Development.</p>
+
 
 <!---
 <p>Some things I excel at:</p>
@@ -24,5 +25,4 @@ description: Developer, Student, Enthusiast
     <li>Python, Ruby</li>
 </ul>
 --->
-<br>
 <!---<a href="#"><button>top</button></a>--->

@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(0, 170, 255);
+}
+
+@keyframes zoom {
+    from {width: 100px;}
+    to {width: 150px;}
+}
+
+img:hover {
+    width: 150px;
+    animation-name: zoom;
+    animation-duration: 500ms;
+}
