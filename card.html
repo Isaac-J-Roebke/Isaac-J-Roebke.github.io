@@ -2,8 +2,21 @@
 <html>
     <body>
 
-        <div class="card"><img src="assets/cards/PNG/Cards (large)/card_diamonds_K.png" alt="DiamondKing"></div>
+        <div class="card_square" id="card_container">
+            <img src="assets/cards/PNG/Cards (large)/card_diamonds_2.png" alt="d2" id="curr_card">
+        </div>
         
+        <br>
+        <br>
+
+        <div class="play_button"><button id="play" onclick="play()">Play</button></div>
+
+        <br>
+        <br>
+
+        <div class="buttons"><button id="hit" onclick="choice()">Hit Me</button><button id="stand" onclick="choice()">Stand</button></div>
+        <div class="text"><p id="user_msg"></p></div>
+
     </body>
     <link rel="stylesheet" href="assets/cards/style.css">
     <script src="assets/cards/card.js"></script>
