@@ -13,6 +13,11 @@ body {
     flex-shrink: 0;
 }
 
+.play_square {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .card_square > img {
     width: 150px;
     flex-shrink: 0;
@@ -35,4 +40,26 @@ button {
 .text {
     margin: auto;
     flex-shrink: 0;
+}
+
+#bust_msg {
+    visibility: hidden;
+    width: 100%;
+    position: absolute;
+    opacity: 50%;
+    background-color: grey;
+    text-align: center;
+}
+
+#win_msg {
+    visibility: hidden;
+    width: 100%;
+    position: absolute;
+    opacity: 50%;
+    background-color: lightgreen;
+    text-align: center;
+}
+
+#user_msg {
+    text-align: center;
 }

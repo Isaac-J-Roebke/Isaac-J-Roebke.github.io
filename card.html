@@ -2,8 +2,17 @@
 <html>
     <body>
 
-        <div class="card_square" id="card_container">
-            <img src="assets/cards/PNG/Cards (large)/card_diamonds_2.png" alt="d2" id="curr_card">
+        <div class="play_square" id="play_square">
+            <div class="card_square" id="card_container">
+                <img src="assets/cards/PNG/Cards (large)/card_back.png" alt="nn" id="curr_card">
+            </div>
+
+            <h1 id="bust_msg">BUST</h1>
+            <h1 id="win_msg">WIN</h1>
+
+            <div class="card_square" id="dealer_container">
+                <img src="assets/cards/PNG/Cards (large)/card_back.png" alt="nn" id="deal_card">
+            </div>
         </div>
         
         <br>
@@ -14,7 +23,7 @@
         <br>
         <br>
 
-        <div class="buttons"><button id="hit" onclick="choice()">Hit Me</button><button id="stand" onclick="choice()">Stand</button></div>
+        <div class="buttons"><button id="hit" onclick="hit()">Hit Me</button><button id="stand" onclick="stand()">Stand</button></div>
         <div class="text"><p id="user_msg"></p></div>
 
     </body>

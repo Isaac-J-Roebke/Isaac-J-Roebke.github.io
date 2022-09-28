@@ -68,13 +68,29 @@ function shuffleArray(array) {
 deck = freshDeck();
 deck = shuffleArray(deck);
 
-function in_hand(hand, card) {
-    let bool = false;
-    for (let i = 0; i < hand.lenth; i++) {
-        if ((card.suit == hand[i].suit) && (card.value == hand[i].value))
-        bool = true;
+function total(hand) {
+    let total = 0;
+    let face_ten = false;
+
+    for (let i = 0; i < hand.length; i++) {
+        if (hand[i].value == '10' || hand[i].value == 'J' || hand[i].value == 'Q' || hand[i].value == 'K') {face_ten = true;}
     }
-    return bool;
+
+    for (let i = 0; i < hand.length; i++) {
+        if (hand[i].value == 'A' && face_ten == true) {total += 1}
+        else {total += hand[i].num()}
+    }
+
+    return total;
+}
+
+function in_hand(y, x) {
+    for (let i = 0; i < y.length; i++) {
+        if (x.suit == y[i].suit && x.value == y[i].value) {
+        return true;
+        }
+    }
+    return false;
 }
 
 function getCardPath(card) {
@@ -87,6 +103,7 @@ function getPlayerHand() {
     let temp = [];
 
     let count = 0;
+
     for (let i = 0; i < cards.length; i++) {
         let x = cards[i].alt.charAt(0);
         let y = cards[i].alt.charAt(1);
@@ -97,17 +114,38 @@ function getPlayerHand() {
         else if (x == 'd') {x = 'diamonds'}
         else if (x == 'n') {x = 'none'}
 
-        y = '0' + y;
+        if (y == '0') {y = '10'}
+        else if (y == 'n') {y = 'none'}
 
-        if (y == '0A') {y = 'A'}
-        else if (y == '00') {y = '10'}
-        else if (y == '0J') {y = 'J'}
-        else if (y == '0Q') {y = 'Q'}
-        else if (y == '0K') {y = 'K'}
-        else if (y == '0n') {y = 'none'}
+        if (y === 'none' || x === 'none') {}
+        else {temp[count] = new Card(x, y)}
 
+        count++;
+    }
 
-        if (y == 'none' || x == 'none') {}
+    return temp;
+}
+
+function getDealerHand() {
+    let cards = document.getElementById('dealer_container').children;
+    let temp = [];
+
+    let count = 0;
+
+    for (let i = 0; i < cards.length; i++) {
+        let x = cards[i].alt.charAt(0);
+        let y = cards[i].alt.charAt(1);
+
+        if (x == 's') {x = 'spades'}
+        else if (x == 'c') {x = 'clubs'}
+        else if (x == 'h') {x = 'hearts'}
+        else if (x == 'd') {x = 'diamonds'}
+        else if (x == 'n') {x = 'none'}
+
+        if (y == '0') {y = '10'}
+        else if (y == 'n') {y = 'none'}
+
+        if (y === 'none' || x === 'none') {}
         else {temp[count] = new Card(x, y)}
 
         count++;
@@ -126,7 +164,7 @@ function getAlt(card) {
     else if (x == 'diamonds') {x = 'd'}
     else if (x == 'none') {x = 'n'}
 
-    if (y.lenth == 2) {y = y.charAt(1)}
+    if (y.length == 2) {y = y.charAt(1)}
 
     if (y == 'A') {y = 'A'}
     else if (y == '10') {y = '0'}
@@ -157,21 +195,52 @@ function rand_card() {
     let x = deck[0];
 
     let i = 1;
-    while (in_hand(temp, x)) {
-        x = deck[i];
-        i++;
+    while (true) {
+        if (!in_hand(temp, x)) {return x}
+        else {
+            deck = shuffleArray(deck);
+            x = deck[0];
+        }
     }
-
-    return x;
 }
 
-function choice() {
+function bust() {
+    document.getElementById("bust_msg").style.visibility = "visible";
+    document.getElementById("hit").disabled = true;
+}
+
+function hit() {
     let x = rand_card();
 
     add_card(x);
+
+    temp = getPlayerHand();
+    if (total(temp) > 21) {bust();}
+}
+
+function stand() {
+    
+}
+
+function replace_backs() {
+    let x = rand_card();
+    let y = rand_card();
+
+    let x_pth = getCardPath(x);
+    let x_alt = getAlt(x);
+
+    let y_pth = getCardPath(y);
+    let y_alt = getAlt(y);
+
+    document.getElementById("curr_card").src = x_pth;
+    document.getElementById("curr_card").alt = x_alt;
+
+    document.getElementById("deal_card").src = y_pth;
+    document.getElementById("deal_card").alt = y_alt;
 }
 
 function play() {
-    //todo game logic
-
+    replace_backs();
+    
+    
 }
