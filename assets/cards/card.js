@@ -242,5 +242,7 @@ function replace_backs() {
 function play() {
     replace_backs();
     
-    
+    let user_msg = "Hit or Stand?";
+
+    document.getElementById("user_msg").textContent = user_msg;
 }
