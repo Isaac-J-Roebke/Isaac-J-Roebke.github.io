@@ -18,12 +18,19 @@ body {
     flex-wrap: wrap;
 }
 
-.card_square > img {
-    width: 150px;
-    flex-shrink: 0;
+.play_square > label {
+    display: flex;
+    justify-content: space-around;
 }
 
-.buttons, .play_button {
+img {
+    width: 100px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: auto;
+}
+
+.buttons, .play_button, .reset {
     display: flex;
     justify-content: center;
 }
@@ -57,6 +64,15 @@ button {
     position: absolute;
     opacity: 50%;
     background-color: lightgreen;
+    text-align: center;
+}
+
+#lose_msg {
+    visibility: hidden;
+    width: 100%;
+    position: absolute;
+    opacity: 50%;
+    background-color: rgb(238, 144, 144);
     text-align: center;
 }
 

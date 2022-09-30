@@ -67,6 +67,7 @@ function shuffleArray(array) {
 
 deck = freshDeck();
 deck = shuffleArray(deck);
+dealer_standing = false;
 
 function total(hand) {
     let total = 0;
@@ -91,6 +92,28 @@ function in_hand(y, x) {
         }
     }
     return false;
+}
+
+function add_back_card() {
+    let node = document.createElement('img');
+    let pth = 'assets/cards/PNG/Cards (large)/card_back.png';
+    let alt = 'nn';
+    let id = 'curr_card';
+    node.src = pth;
+    node.alt = alt;
+    node.id = id;
+    document.getElementById("card_container").appendChild(node);
+}
+
+function add_back_card_dealer() {
+    let node = document.createElement('img');
+    let pth = 'assets/cards/PNG/Cards (large)/card_back.png';
+    let alt = 'nn';
+    let id = 'deal_card'
+    node.src = pth;
+    node.alt = alt;
+    node.id = id;
+    document.getElementById("dealer_container").appendChild(node);
 }
 
 function getCardPath(card) {
@@ -187,6 +210,15 @@ function add_card(card) {
     document.getElementById("card_container").appendChild(node);
 }
 
+function add_card_dealer(card) {
+    let node = document.createElement('img');
+    let pth = getCardPath(card);
+    let alt = getAlt(card);
+    node.src = pth;
+    node.alt = alt;
+    document.getElementById("dealer_container").appendChild(node);
+}
+
 function rand_card() {
     let temp = getPlayerHand();
 
@@ -207,6 +239,38 @@ function rand_card() {
 function bust() {
     document.getElementById("bust_msg").style.visibility = "visible";
     document.getElementById("hit").disabled = true;
+    document.getElementById("stand").disabled = true;
+    document.getElementById("play").disabled = true;
+}
+
+function win() {
+    document.getElementById("win_msg").style.visibility = "visible";
+    document.getElementById("hit").disabled = true;
+    document.getElementById("stand").disabled = true;
+    document.getElementById("play").disabled = true;
+}
+
+function lose() {
+    document.getElementById("lose_msg").style.visibility = "visible";
+    document.getElementById("hit").disabled = true;
+    document.getElementById("stand").disabled = true;
+    document.getElementById("play").disabled = true;
+}
+
+function dealer_turn() {
+
+    if (total(getDealerHand()) >= 17 && total(getDealerHand()) <= 21) {
+        dealer_standing = true;
+    }
+    else if (total(getDealerHand()) > 21) {
+        win();
+        dealer_standing = true;
+    }
+    else if (dealer_standing == false) {
+        let x = rand_card();
+        add_card_dealer(x);
+    }
+    document.getElementById("dealer_num").textContent = total(getDealerHand());
 }
 
 function hit() {
@@ -214,12 +278,56 @@ function hit() {
 
     add_card(x);
 
-    temp = getPlayerHand();
-    if (total(temp) > 21) {bust();}
+    document.getElementById("player_num").textContent = total(getPlayerHand());
+
+    if (total(getPlayerHand()) > 21) {bust();}
+    else if (total(getPlayerHand()) == 21) {win();}
+    else {dealer_turn();}
 }
 
 function stand() {
-    
+    document.getElementById("hit").disabled = true;
+
+    while(dealer_standing == false) {
+        dealer_turn();
+    }
+
+    document.getElementById("dealer_num").textContent = total(getDealerHand());
+
+    if (total(getDealerHand()) > 21) {
+        win();
+    }
+    else if (total(getDealerHand()) <= total(getPlayerHand())) {
+        win();
+    } else {
+        lose();
+    }
+}
+
+function reset() {
+    document.getElementById("bust_msg").style.visibility = "hidden";
+    document.getElementById("win_msg").style.visibility = "hidden";
+    document.getElementById("lose_msg").style.visibility = "hidden";
+    document.getElementById("hit").disabled = true;
+    document.getElementById("stand").disabled = true;
+    document.getElementById("play").disabled = false;
+
+    let cards = document.getElementsByTagName("img");
+
+    for (let i = cards.length - 1; i >= 0; i--) {
+        cards[i].remove();
+    }
+
+    add_back_card();
+    add_back_card_dealer();
+
+    document.getElementById("player_num").textContent = "";
+    document.getElementById("dealer_num").textContent = "";
+    document.getElementById("user_msg").textContent = "";
+
+    deck = freshDeck();
+    deck = shuffleArray(deck);
+    dealer_standing = false;
 }
 
 function replace_backs() {
@@ -241,8 +349,9 @@ function replace_backs() {
 
 function play() {
     replace_backs();
-    
-    let user_msg = "Hit or Stand?";
 
-    document.getElementById("user_msg").textContent = user_msg;
+    document.getElementById("hit").disabled = false;
+    document.getElementById("stand").disabled = false;
+    
+    document.getElementById("user_msg").textContent = "Hit or Stand?";
 }
