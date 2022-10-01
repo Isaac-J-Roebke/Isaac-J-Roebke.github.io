@@ -2,11 +2,10 @@
 <html>
     <body>
 
-        <div class="play_square" id="play_square">
+        <div class="play_square">
             <div class="card_square" id="card_container">
                 <img src="assets/cards/PNG/Cards (large)/card_back.png" alt="nn" id="curr_card">
             </div>
-            <label for="card_container" id="player_num"></label>
 
             <h1 id="bust_msg">BUST</h1>
             <h1 id="win_msg">YOU WIN</h1>
@@ -15,24 +14,22 @@
             <div class="card_square" id="dealer_container">
                 <img src="assets/cards/PNG/Cards (large)/card_back.png" alt="nn" id="deal_card">
             </div>
-            <label for="dealer_container" id="dealer_num"></label>
+        </div>
+
+        <div id="labels">
+            <label for="card_container" id="player_num">0</label>
+            <label for="dealer_container" id="dealer_num">0</label>
         </div>
         
         <br>
         <br>
-
-        <div class="play_button"><button id="play" onclick="play()">Play</button></div>
-
         <br>
         <br>
 
         <div class="buttons">
+            <button id="play" onclick="play()">Play</button>
             <button id="hit" onclick="hit()" disabled>Hit Me</button>
             <button id="stand" onclick="stand()" disabled>Stand</button>
-        </div>
-        <div class="text"><p id="user_msg"></p></div>
-
-        <div class="reset">
             <button onclick="reset()">Reset</button>
         </div>
 

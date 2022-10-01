@@ -321,9 +321,8 @@ function reset() {
     add_back_card();
     add_back_card_dealer();
 
-    document.getElementById("player_num").textContent = "";
-    document.getElementById("dealer_num").textContent = "";
-    document.getElementById("user_msg").textContent = "";
+    document.getElementById("player_num").textContent = "0";
+    document.getElementById("dealer_num").textContent = "0";
 
     deck = freshDeck();
     deck = shuffleArray(deck);
@@ -352,6 +351,8 @@ function play() {
 
     document.getElementById("hit").disabled = false;
     document.getElementById("stand").disabled = false;
+    document.getElementById("play").disabled = true;
     
-    document.getElementById("user_msg").textContent = "Hit or Stand?";
+    document.getElementById("player_num").textContent = total(getPlayerHand());
+    document.getElementById("dealer_num").textContent = total(getDealerHand());
 }
