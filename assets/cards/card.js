@@ -241,6 +241,7 @@ function bust() {
     document.getElementById("hit").disabled = true;
     document.getElementById("stand").disabled = true;
     document.getElementById("play").disabled = true;
+    document.getElementById("reset").disabled = false;
 }
 
 function win() {
@@ -248,6 +249,7 @@ function win() {
     document.getElementById("hit").disabled = true;
     document.getElementById("stand").disabled = true;
     document.getElementById("play").disabled = true;
+    document.getElementById("reset").disabled = false;
 }
 
 function lose() {
@@ -255,6 +257,7 @@ function lose() {
     document.getElementById("hit").disabled = true;
     document.getElementById("stand").disabled = true;
     document.getElementById("play").disabled = true;
+    document.getElementById("reset").disabled = false;
 }
 
 function dealer_turn() {
@@ -351,6 +354,7 @@ function play() {
 
     document.getElementById("hit").disabled = false;
     document.getElementById("stand").disabled = false;
+    document.getElementById("reset").disabled = true;
     document.getElementById("play").disabled = true;
     
     document.getElementById("player_num").textContent = total(getPlayerHand());
