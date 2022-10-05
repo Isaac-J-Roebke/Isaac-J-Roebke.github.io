@@ -1,4 +1,4 @@
-const SUITS = ['spades', 'clubs', 'hearts', 'diamonds']
+const SUITS = ['spades', 'clubs', 'hearts', 'diamonds'];
 const VALUE = [
     'A',
     '2',
@@ -13,7 +13,7 @@ const VALUE = [
     'J',
     'Q',
     'K'
-]
+];
 
 class Card {
     constructor(suit, value) {
@@ -85,14 +85,15 @@ function total(hand) {
     return total;
 }
 
-function in_hand(y, x) {
-    for (let i = 0; i < y.length; i++) {
-        if (x.suit == y[i].suit && x.value == y[i].value) {
-        return true;
-        }
-    }
-    return false;
-}
+// OBSOLETE
+// function in_hand(y, x) {
+//     for (let i = 0; i < y.length; i++) {
+//         if (x.suit == y[i].suit && x.value == y[i].value) {
+//         return true;
+//         }
+//     }
+//     return false;
+// }
 
 function add_back_card() {
     let node = document.createElement('img');
@@ -228,7 +229,7 @@ function rand_card() {
 
     let i = 1;
     while (true) {
-        if (!in_hand(temp, x)) {return x}
+        if (!temp.includes(x)) {return x}
         else {
             deck = shuffleArray(deck);
             x = deck[0];

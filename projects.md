@@ -21,7 +21,7 @@ description: " "
   <a href="../card.html"><button>Play Game</button></a>
 </div>
 
-<br>
+<!-- <br>
 
 <div id="AreaUnderCurve">
   <h1>Parallel Computing: Area Under a Curve</h1>
@@ -29,7 +29,7 @@ description: " "
   <p>For this project, my task was to parallelize an algorithm designed to find the area under a curve.</p>
 
   <a href=""><button>View Project on Github</button></a>
-</div>
+</div> -->
 
 <br>
 
