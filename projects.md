@@ -21,15 +21,15 @@ description: " "
   <a href="../card.html"><button>Play Game</button></a>
 </div>
 
-<!-- <br>
+<br>
 
-<div id="AreaUnderCurve">
-  <h1>Parallel Computing: Area Under a Curve</h1>
+<div id="ParallelPi">
+  <h1>Parallel Computing: Calculating Pi</h1>
 
-  <p>For this project, my task was to parallelize an algorithm designed to find the area under a curve.</p>
+  <p>For this project, my task was to parallelize an algorithm designed to calculate pi.</p>
 
-  <a href=""><button>View Project on Github</button></a>
-</div> -->
+  <a href="https://github.com/Isaac-J-Roebke/ParallelPi"><button>View Project on Github</button></a>
+</div>
 
 <br>
 
@@ -41,13 +41,3 @@ description: " "
   <a href="https://github.com/Isaac-J-Roebke/Parallel-Count-Sort"><button>View Project on Github</button></a>
 </div>
 
-<!---
-  <div>
-      <h1>Card Game: Javascript</h1>
-
-        <p>I made this in-browser game.</p>
-
-        <a href="card.html"><button>Play</button></a>
-      <p></p>
-  </div>
---->
