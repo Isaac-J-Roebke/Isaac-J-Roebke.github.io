@@ -13,7 +13,7 @@ description: " "
 <br>
 
 <div id="BlackJack">
-  <h1>Blackjack (Work in Progress)</h1>
+  <h1>Blackjack</h1>
 
   <p>For this project I made a web-based blackjack game completely from scratch.</p>
   <p>Note: all code is original, however, the card assets are from a free online resource.</p>
