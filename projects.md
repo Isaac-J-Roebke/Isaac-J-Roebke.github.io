@@ -23,6 +23,16 @@ description: " "
 
 <br>
 
+<div id="ParallelMatrix">
+  <h1>Parallel Computing: Matrix Vector Multiplication</h1>
+
+  <p>For this project, I created an algorithm for multiplying a matrix and a vector in parallel.</p>
+
+  <a href="https://github.com/Isaac-J-Roebke/Parallel_Matrix_Vector_Multiplication"><button>View Project on Github</button></a>
+<div>
+
+<br>
+
 <div id="ParallelPi">
   <h1>Parallel Computing: Calculating Pi</h1>
 
