@@ -13,4 +13,4 @@ description: " "
 
 <p>Below you will find a link to download my resume. Thank you for your consideration!</p>
 
-<h1><a href="../assets/resume.pdf" download>Resume Download Link</a></h1>
+<!-- <h1><a href="../assets/resume.pdf" download>Resume Download Link</a></h1> -->
