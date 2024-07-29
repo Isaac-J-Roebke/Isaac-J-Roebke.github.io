@@ -1,7 +1,7 @@
 ---
 title: Isaac J Roebke
 #layout: root
-#description: 
+description: ""
 ---
 
 <div class="menu" style="text-align: center;">
