@@ -12,17 +12,6 @@ description: " "
 
 <br>
 
-<div id="BlackJack">
-  <h1>Blackjack</h1>
-
-  <p>For this project I made a web-based blackjack game completely from scratch.</p>
-  <p>Note: all code is original, however, the card assets are from a free online resource.</p>
-
-  <a href="../card.html"><button>Play Game</button></a>
-</div>
-
-<br>
-
 <div id="ParallelMatrix">
   <h1>Parallel Computing: Matrix Vector Multiplication</h1>
 
@@ -51,3 +40,15 @@ description: " "
   <a href="https://github.com/Isaac-J-Roebke/Parallel-Count-Sort"><button>View Project on Github</button></a>
 </div>
 
+<br>
+
+<div id="BlackJack">
+  <h1>Blackjack</h1>
+
+  <p>For this project I made a web-based blackjack game completely from scratch.</p>
+  <p>Note: all code is original, however, the card assets are from a free online resource.</p>
+
+  <a href="../card.html"><button>Play Game</button></a>
+</div>
+
+<br>

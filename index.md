@@ -1,7 +1,7 @@
 ---
 title: Isaac J Roebke
 #layout: root
-description: Developer, Student, Enthusiast
+#description: 
 ---
 
 <div class="menu" style="text-align: center;">
@@ -13,8 +13,8 @@ description: Developer, Student, Enthusiast
 <h1>About me</h1>
 
 <p style="text-indent: 15px">Hello and thank you for visiting my website!
-   I am currently a student at Bowling Green State University and my major is Computer Science.
-   My passions inlude Software Engineering and Web Development.</p>
+   I am a Software Engineer at Nationwide Mutual Insurance.
+   My passions inlude Software Engineering, Open Source Software, and my cat Oliver.</p>
 
 
 <!---
